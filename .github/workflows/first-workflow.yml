@@ -1,6 +1,7 @@
 name: first workflow
-
 on:
+  repository_dispatch:
+    types: [test]
   push:
     branches:
       - "main"
@@ -24,3 +25,4 @@ jobs:
       - name: after checkout action
         run: ls
         shell: bash
+
